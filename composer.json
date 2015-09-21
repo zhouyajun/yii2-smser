@@ -16,6 +16,7 @@
     "require": {
         "yiisoft/yii2": "*"
     },
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "zyj\\smser\\": ""
