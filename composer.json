@@ -1,5 +1,5 @@
 {
-    "name": "zyjhm/yii2-zyj-smser",
+    "name": "zhouyajun/yii2-zyj-smser",
     "description": "Yii2 SMS extension",
     "keywords": ["yii2", "extension", "smser", "plugin"],
     "homepage": "https://github.com/zyjhm/yii2-smser",
@@ -9,14 +9,14 @@
         {
             "name": "zyj",
             "email": "617242499@qq.com",
-            "homepage": "http://push.glavesoft.com",
+            "homepage": "",
             "role": "Developer"
         }
     ],
     "require": {
         "yiisoft/yii2": "*"
     },
-    "minimum-stability": "dev",
+    "minimum-stability":"dev",
     "autoload": {
         "psr-4": {
             "zyj\\smser\\": ""
