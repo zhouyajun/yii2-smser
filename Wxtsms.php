@@ -37,6 +37,7 @@
 			$result = $this->postRequire($data);
 
 			var_dump($result);
+			exit;
 		}
 	}
 ?>
