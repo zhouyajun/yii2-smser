@@ -26,13 +26,14 @@
 		 *	@var string $content 
 		 */
 		public 	function sendSms($mobile,$content)
-		{
+		{	
+			$content = urlencode($content);
 			$data = [
 				'Action'=>'SendSms',
 				'Username'=>$this->username,
 				'Password'=>$this->password,
 				'Mobile'=>$mobile,
-				'Message'=>urlencode($content)
+				'Message'=>($content)
 			];
 			$result = $this->postRequire($data);
 
