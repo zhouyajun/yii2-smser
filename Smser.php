@@ -93,10 +93,31 @@
 		/**
 		 * 	设置密码
 		 * 
-		 * 
+		 * 	@var string $password
 		 */
 		protected function setPassword($password){
 			$this->password = $password;
+		}
+
+		/**
+		 * 	获取消息
+		 * 
+		 * 	@return string
+		 */
+		protected function getMessage()
+		{
+
+			return $this->message;
+		}
+
+		/**
+		 * 	获取状态
+		 * 
+		 * 	@return state
+		 */
+		protected function getState()
+		{
+			return $this->state;
 		}
 
 	}
