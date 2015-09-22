@@ -42,7 +42,7 @@
 			$this->state = false;
 			switch($res_sta){
 				case '0':
-					$this->messaeg = '短信发送成功';
+					$this->message = '短信发送成功';
 					$this->state = true;
 					break;
 				case '1':
