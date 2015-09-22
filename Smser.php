@@ -90,5 +90,14 @@
 			return $result;
 		}
 
+		/**
+		 * 	设置密码
+		 * 
+		 * 
+		 */
+		protected function setPassword($password){
+			$this->password = $password;
+		}
+
 	}
 ?>
