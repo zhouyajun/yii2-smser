@@ -79,14 +79,13 @@
 		protected function getRequire(){
 
 			$ch = curl_init();
-		　　//设置选项，包括URL
-		　　curl_setopt($ch, CURLOPT_URL,$this->url);
-		　　curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
-		　　curl_setopt($ch, CURLOPT_HEADER, 0);
-		　　$result = curl_exec($ch);
+			curl_setopt($ch,CURLOPT_URL,$this->url);
+			curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+			curl_setopt($ch, CURLOPT_HEADER, 0);
 
-		　　//释放curl句柄
-		　　curl_close($ch);
+			$result = culr_exec($ch);
+
+			curl_close($ch);
 
 			return $result;
 		}
