@@ -47,18 +47,13 @@
 		protected $message;
 
 		/**
-		 * 	发送短信
-		 * 
-		 * 	@param  string $mobile 
-		 */
-
-		/**
 		 *  curl post 请求
 		 *	
 		 *	@param array  $data
 		 *	@retrun result
 		 */
-		protected  function postRequire($data){
+		protected  function postRequire($data)
+		{
 
 			$ch = curl_init();
 	        curl_setopt($ch, CURLOPT_URL, $this->url);
@@ -76,7 +71,8 @@
 		 * 
 		 * 	$return result
 		 */
-		protected function getRequire(){
+		protected function getRequire()
+		{
 
 			$ch = curl_init();
 			curl_setopt($ch,CURLOPT_URL,$this->url);
@@ -95,7 +91,9 @@
 		 * 
 		 * 	@var string $password
 		 */
-		protected function setPassword($password){
+		protected function setPassword($password)
+		{
+
 			$this->password = $password;
 		}
 

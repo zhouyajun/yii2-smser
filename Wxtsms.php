@@ -35,6 +35,7 @@
 				'Mobile'=>$mobile,
 				'Message'=>urlencode($content)
 			];
+			
 			$result = $this->postRequire($data);
 
 			$res = explode(':', $result);
