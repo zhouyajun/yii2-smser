@@ -34,7 +34,10 @@
 				'Mobile'=>$mobile,
 				'Message'=>urlencode($content)
 			];
-			$result = $this->postRequire($data);
+			$urls = $this->url.'/?'.http_build_query($data);
+			return $urls;
+			exit;
+			$result = $this->getRequire();
 
 			var_dump($result);
 			exit;
