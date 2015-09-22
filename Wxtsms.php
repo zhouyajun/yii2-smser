@@ -37,7 +37,7 @@
 			];
 			$result = $this->postRequire($data);
 
-			$res = explode(':', $result)
+			$res = explode(':', $result);
 			$res_sta = $res[0];
 			$this->state = false;
 			switch($res_sta){
