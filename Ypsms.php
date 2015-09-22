@@ -28,8 +28,14 @@
 		 */
 		public 	function sendSms($mobile,$content)
 		{
-			
-			return $this->state;
+			$data = [
+				'apikey'=>$this->apikey,
+				'mobile'=>$mobile,
+				'text'=>$content
+			];
+			$res = $this->postRequire($data);
+
+			return $res;
 		}
 
 		

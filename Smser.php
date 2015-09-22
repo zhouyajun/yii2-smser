@@ -33,6 +33,12 @@
 		protected $password;
 
 		/**
+		 *  云片apikey
+		 * 
+		 * 	@var string
+		 */
+		protected $apikey;
+		/**
 		 * 	状态码
 		 * 	
 		 * 	@var string
@@ -116,6 +122,16 @@
 		protected function getState()
 		{
 			return $this->state;
+		}
+
+		/**
+		 * 	设置apikey
+		 * 
+		 * 	@return state
+		 */
+		protected function setApikey($apikey)
+		{
+			 $this->apikey = $apikey;
 		}
 
 	}
