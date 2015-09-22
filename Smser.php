@@ -47,18 +47,13 @@
 		protected $message;
 
 		/**
-		 * 	发送短信
-		 * 
-		 * 	@param  string $mobile 
-		 */
-
-		/**
 		 *  curl post 请求
 		 *	
 		 *	@param array  $data
 		 *	@retrun result
 		 */
-		protected  function postRequire($data){
+		protected  function postRequire($data)
+		{
 
 			$ch = curl_init();
 	        curl_setopt($ch, CURLOPT_URL, $this->url);
@@ -76,19 +71,51 @@
 		 * 
 		 * 	$return result
 		 */
-		protected function getRequire(){
+		protected function getRequire()
+		{
 
 			$ch = curl_init();
-		　　//设置选项，包括URL
-		　　curl_setopt($ch, CURLOPT_URL,$this->url);
-		　　curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
-		　　curl_setopt($ch, CURLOPT_HEADER, 0);
-		　　$result = curl_exec($ch);
+			curl_setopt($ch,CURLOPT_URL,$this->url);
+			curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+			curl_setopt($ch, CURLOPT_HEADER, 0);
 
-		　　//释放curl句柄
-		　　curl_close($ch);
+			$result = culr_exec($ch);
+
+			curl_close($ch);
 
 			return $result;
+		}
+
+		/**
+		 * 	设置密码
+		 * 
+		 * 	@var string $password
+		 */
+		protected function setPassword($password)
+		{
+
+			$this->password = $password;
+		}
+
+		/**
+		 * 	获取消息
+		 * 
+		 * 	@return string
+		 */
+		protected function getMessage()
+		{
+
+			return $this->message;
+		}
+
+		/**
+		 * 	获取状态
+		 * 
+		 * 	@return state
+		 */
+		protected function getState()
+		{
+			return $this->state;
 		}
 
 	}
