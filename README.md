@@ -12,7 +12,7 @@ yii2短信扩展
 	#云片
 	'smser'=>[
 		'class'=>'zyj\smser\Ypsms',
-		'apikey'=>'your apikey'
+		'apikey'=>'your apikey',
 	]
 ```
 #install
