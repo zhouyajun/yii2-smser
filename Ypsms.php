@@ -35,8 +35,9 @@
 			];
 			$res = $this->postRequire($data);
 			$result = json_decode($res);
-			$result_code = $result['code'];
-			$result_msg = $result['msg'];
+			$result_code = $result->code;
+
+			$result_msg = $result->msg;
 			if($result_code == 0){
 				$this->state = true;
 				$this->message = '发送成功';
