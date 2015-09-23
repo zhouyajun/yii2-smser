@@ -3,12 +3,17 @@ yii2短信扩展
 # usage
 在组件中配置：
 ```php
-	'smser'=[
+	#网信通
+	'smser'=>[
 		'class'=>'zyj\smser\Wxtsms',
 		'username'=>'username',
 		'password'=>'password',
 	]
-使用 :
-	Yii::$app->smser->sendSms($code,$message);
+	#云片
+	'smser'=>[
+		'class'=>'zyj\smser\Ypsms',
+		'apikey'=>'your apikey'
+	]
 ```
-	
+#install
+	composer require zyj/yii2-mysmser	
