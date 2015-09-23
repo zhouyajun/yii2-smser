@@ -35,14 +35,13 @@
 				'Mobile'=>$mobile,
 				'Message'=>urlencode($content)
 			];
-			$result = $this->postRequire($data);
 
 			$res = explode(':', $result);
 			$res_sta = $res[0];
 			$this->state = false;
 			switch($res_sta){
 				case '0':
-					$this->messaeg = '短信发送成功';
+					$this->message = '短信发送成功';
 					$this->state = true;
 					break;
 				case '1':

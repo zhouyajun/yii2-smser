@@ -33,6 +33,12 @@
 		protected $password;
 
 		/**
+		 *  云片apikey
+		 * 
+		 * 	@var string
+		 */
+		protected $apikey;
+		/**
 		 * 	状态码
 		 * 	
 		 * 	@var string
@@ -47,18 +53,13 @@
 		protected $message;
 
 		/**
-		 * 	发送短信
-		 * 
-		 * 	@param  string $mobile 
-		 */
-
-		/**
 		 *  curl post 请求
 		 *	
 		 *	@param array  $data
 		 *	@retrun result
 		 */
-		protected  function postRequire($data){
+		protected  function postRequire($data)
+		{
 
 			$ch = curl_init();
 	        curl_setopt($ch, CURLOPT_URL, $this->url);
@@ -76,7 +77,8 @@
 		 * 
 		 * 	$return result
 		 */
-		protected function getRequire(){
+		protected function getRequire()
+		{
 
 			$ch = curl_init();
 			curl_setopt($ch,CURLOPT_URL,$this->url);
@@ -88,6 +90,48 @@
 			curl_close($ch);
 
 			return $result;
+		}
+
+		/**
+		 * 	设置密码
+		 * 
+		 * 	@var string $password
+		 */
+		protected function setPassword($password)
+		{
+
+			$this->password = $password;
+		}
+
+		/**
+		 * 	获取消息
+		 * 
+		 * 	@return string
+		 */
+		protected function getMessage()
+		{
+
+			return $this->message;
+		}
+
+		/**
+		 * 	获取状态
+		 * 
+		 * 	@return state
+		 */
+		protected function getState()
+		{
+			return $this->state;
+		}
+
+		/**
+		 * 	设置apikey
+		 * 
+		 * 	@return state
+		 */
+		protected function setApikey($apikey)
+		{
+			 $this->apikey = $apikey;
 		}
 
 	}
